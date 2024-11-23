@@ -2,6 +2,7 @@ import { Button, Input } from "antd"
 import axios from "axios"
 import React, { useState } from "react"
 import toast, { Toaster } from "react-hot-toast"
+import { Link } from "react-router-dom"
 
 interface LoginType {
   phone_number: string
@@ -38,6 +39,7 @@ const LoginPage = () => {
           <Input value={phone_number} onChange={(e) => setPhone(e.target.value)} variant="outlined" type="text" placeholder="Enter your Phone number" size="large" />
           <Input value={password} onChange={(e) => setPassword(e.target.value)} variant="outlined" type="password" placeholder="Enter your Password" size="large" />
           <Button htmlType="submit" type="primary" size="large" className="w-full">Sign In</Button>
+          <Link className="text-center my-4 text-blue-500 block" to={"/register"}>Sign-up</Link>
         </form>
       </div>
     </>
